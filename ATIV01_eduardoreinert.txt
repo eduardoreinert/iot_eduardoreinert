@@ -1,0 +1,104 @@
+1.
+
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+		setlocale(LC_ALL, "Portuguese");
+	float salario, novosalario;
+	//mostra a mensagem 
+	printf("\nDigite o slário do funcionário: ");
+	//le o que o usuario inseriu
+	scanf("%f%*c",&salario);
+	//conta para novo salario
+	novosalario = salario + salario * 25/100;
+	//mostra o novo salario
+	printf("\nNovo salário = %0.2f", novosalario);
+	
+	getchar();
+	return 0;
+}
+
+-----------------------------------
+
+2.
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+		setlocale(LC_ALL, "Portuguese");
+	
+	float salario, bonusSalario, impostoSalario, novoSalario;
+	//mostra a mensagem 
+	printf("\nDigite o slário do funcionário: ");
+	//le o que o usuario inseriu
+	scanf("%f%*c",&salario);
+	//quanto sera retirado pelo imposto
+	bonusSalario = salario * 5/100;
+	//quanto sera adicionado pelo bonus
+	impostoSalario = salario * 7/100;
+	//novo salario
+	novoSalario = salario - impostoSalario + bonusSalario;
+	//print de varias informações
+	printf("\nImposto pago = %0.2f", impostoSalario);
+	printf("\nBonûs sobre o salário = %0.2f", bonusSalario);
+	printf("\n\nSalário final = %0.2f", novoSalario);
+}
+
+------------------------------------
+
+3.
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+		setlocale(LC_ALL, "Portuguese");
+	float taxa, deposito, valorFinal, acrescimo;
+	
+	//mostra a mensagem 
+	printf("\nDigite o valor do depósito: ");
+	//le o que o usuario inseriu
+	scanf("%f%*c",&deposito);
+	//mostra a mensagem 
+	printf("\nDigite o valor da taxa de juros (número inteiro): ");
+	//le o que o usuario inseriu
+	scanf("%f%*c",&taxa);
+	
+	taxa = taxa/100;
+	
+	acrescimo = deposito * taxa;
+	
+	valorFinal = deposito + acrescimo;
+	
+	printf("\nDepósito feito = %0.2f", deposito);
+	printf("\nTaxa aplicada = %0.2f", taxa);
+	printf("\nAcrescimo a partir da taxa = %0.2f", acrescimo);
+	printf("\n\nValor final = %0.2f", valorFinal);
+}
+
+--------------------------------------------
+
+4.
+#include <stdio.h>
+#include <locale.h>
+
+int main(){
+		setlocale(LC_ALL, "Portuguese");
+	float pes, polegadas, jardas, milhas;
+	
+	//mostra a mensagem 
+	printf("\nDigite o valor em pés: ");
+	//le o que o usuario inseriu
+	scanf("%f%*c",&pes);
+	
+	polegadas = pes * 12;
+	jardas = pes / 3;
+	milhas = pes / 5280;
+	
+	printf("\nValor em pés digitado = %0.2f", pes);
+	printf("\nValor em polegadas = %0.2f", polegadas);
+	printf("\nValor em jardas = %0.2f", jardas);
+	printf("\nValor em milhas = %0.2f", milhas);
+}
+
+---------------------------
